@@ -1,23 +1,6 @@
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIESTIA - Organiza Celebraciones Exclusivos</title>
-    <style>
-        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; color: #333; }
-        header { background: linear-gradient(135deg, #0d1b2a, #1b263b); color: white; padding: 20px; font-size: 24px; }
-        header img { max-width: 250px; display: block; margin: 0 auto; }
-        section { padding: 50px; max-width: 900px; margin: auto; }
-        .cta-button { background: #c99d66; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 20px; font-weight: bold; }
-        .cta-button:hover { background: #b5895e; }
-        footer { background: #1b263b; color: white; padding: 15px; position: relative; bottom: 0; width: 100%; font-size: 14px; }
-        .highlight { font-weight: bold; color: #c99d66; }
-    </style>
-</head>
-<body>
     <header>
-        <img src="logo_fiestia_formal.png" alt="FIESTIA Logo">
-        <h1>FIESTIA - Organización de Eventos Premium</h1>
+        <h1>FIESTIA - Celebraciones inolvidables</h1>
     </header>
     <section>
         <h2>Eventos exclusivos con planificación de alto nivel</h2>
