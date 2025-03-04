@@ -18,12 +18,12 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #2c3e50; /* Azul oscuro */
       margin-bottom: 20px;
     }
@@ -72,6 +72,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin: 10px;
       min-width: 250px; /* Ancho mínimo para evitar que se vean muy pequeños */
+      max-width: 300px; /* Ancho máximo para mantener la proporción */
     }
 
     .feature h3 {
@@ -126,7 +127,7 @@
     /* Estilos responsivos */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Tamaño más pequeño para móviles */
       }
 
       h2 {
@@ -135,29 +136,36 @@
 
       .features {
         flex-direction: column; /* Apila las columnas en móviles */
+        align-items: center; /* Centra las tarjetas */
       }
 
       .feature {
         margin: 10px 0; /* Reduce el margen en móviles */
+        width: 90%; /* Ocupa casi todo el ancho en móviles */
+        max-width: 100%; /* Elimina el límite de ancho */
       }
 
       #formulario input[type="email"] {
-        width: 100%; /* Ajusta el ancho del campo de correo */
+        width: 90%; /* Ajusta el ancho del campo de correo */
+      }
+
+      .cta-button {
+        width: 90%; /* Botón de ancho completo en móviles */
+        padding: 12px;
       }
     }
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem; /* Tamaño más pequeño para pantallas muy pequeñas */
       }
 
       h2 {
         font-size: 1.3rem;
       }
 
-      .cta-button {
-        width: 100%; /* Botón de ancho completo en móviles */
-        padding: 12px;
+      p {
+        font-size: 1rem; /* Texto más pequeño en móviles */
       }
     }
   </style>
