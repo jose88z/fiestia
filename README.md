@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -18,12 +17,12 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #2c3e50; /* Azul oscuro */
       margin-bottom: 20px;
     }
@@ -72,7 +71,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin: 10px;
       min-width: 250px; /* Ancho mínimo para evitar que se vean muy pequeños */
-      max-width: 300px; /* Ancho máximo para mantener la proporción */
+      max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
     }
 
     .feature h3 {
@@ -93,17 +92,22 @@
 
     #formulario input[type="email"] {
       padding: 12px;
-      width: 300px;
-      max-width: 100%;
+      width: 100%; /* Ocupa todo el ancho disponible */
+      max-width: 400px; /* Limita el ancho máximo */
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #fff;
       color: #333;
       font-size: 1rem;
+      box-sizing: border-box; /* Evita que el padding afecte el ancho */
     }
 
     #formulario button {
       margin-top: 15px;
+      width: 100%; /* Ocupa todo el ancho disponible */
+      max-width: 400px; /* Limita el ancho máximo */
+      padding: 12px;
+      font-size: 1rem;
     }
 
     /* Pie de página */
@@ -127,7 +131,7 @@
     /* Estilos responsivos */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.5rem; /* Tamaño más pequeño para móviles */
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
       }
 
       h2 {
@@ -147,17 +151,18 @@
 
       #formulario input[type="email"] {
         width: 90%; /* Ajusta el ancho del campo de correo */
+        max-width: 100%; /* Elimina el límite de ancho */
       }
 
-      .cta-button {
+      #formulario button {
         width: 90%; /* Botón de ancho completo en móviles */
-        padding: 12px;
+        max-width: 100%; /* Elimina el límite de ancho */
       }
     }
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 2rem; /* Tamaño más pequeño para pantallas muy pequeñas */
+        font-size: 1.8rem; /* Tamaño más pequeño para pantallas muy pequeñas */
       }
 
       h2 {
@@ -166,6 +171,16 @@
 
       p {
         font-size: 1rem; /* Texto más pequeño en móviles */
+      }
+
+      .container {
+        padding: 10px; /* Reduce el padding en móviles */
+      }
+
+      .cta-button {
+        width: 90%; /* Botón de ancho completo en móviles */
+        max-width: 100%; /* Elimina el límite de ancho */
+        padding: 12px;
       }
     }
   </style>
