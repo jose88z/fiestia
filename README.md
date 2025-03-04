@@ -1,39 +1,211 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIESTIA - Eventos Únicos</title>
-    <style>
-        body { font-family: 'Helvetica Neue', sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; color: #333; }
-        header { background: linear-gradient(135deg, #0d1b2a, #1b263b); color: white; padding: 20px; font-size: 24px; }
-        header img { max-width: 250px; display: block; margin: 0 auto; }
-        section { padding: 50px; max-width: 900px; margin: auto; }
-        .cta-button { background: #c99d66; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 20px; font-weight: bold; }
-        .cta-button:hover { background: #b5895e; }
-        footer { background: #1b263b; color: white; padding: 15px; position: relative; bottom: 0; width: 100%; font-size: 14px; }
-        .highlight { font-weight: bold; color: #c99d66; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FiestIA - Que tu Celebración sea Inolvidable</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa; /* Fondo claro */
+      color: #333; /* Texto oscuro */
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50; /* Azul oscuro */
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #34495e; /* Azul grisáceo */
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #555; /* Texto gris oscuro */
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      color: #fff; /* Texto blanco */
+      background-color: #3498db; /* Azul brillante */
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #2980b9; /* Azul más oscuro */
+    }
+
+    /* Sección de características */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 60px;
+      flex-wrap: wrap; /* Para que se ajuste en móviles */
+    }
+
+    .feature {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff; /* Fondo blanco */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      min-width: 250px; /* Ancho mínimo para evitar que se vean muy pequeños */
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      color: #3498db; /* Azul brillante */
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #666; /* Texto gris */
+    }
+
+    /* Formulario */
+    #formulario {
+      margin-top: 60px;
+    }
+
+    #formulario input[type="email"] {
+      padding: 12px;
+      width: 300px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    #formulario button {
+      margin-top: 15px;
+    }
+
+    /* Pie de página */
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #2c3e50; /* Azul oscuro */
+      color: #fff; /* Texto blanco */
+      text-align: center;
+    }
+
+    footer a {
+      color: #3498db; /* Azul brillante */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .features {
+        flex-direction: column; /* Apila las columnas en móviles */
+      }
+
+      .feature {
+        margin: 10px 0; /* Reduce el margen en móviles */
+      }
+
+      #formulario input[type="email"] {
+        width: 100%; /* Ajusta el ancho del campo de correo */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .cta-button {
+        width: 100%; /* Botón de ancho completo en móviles */
+        padding: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Encabezado -->
     <header>
-        <h1>FIESTIA - Celebraciones inolvidables
+      <h1>FiestIA</h1>
+      <h2>Que tu Celebración sea Inolvidable</h2>
+      <p>
+        Organiza <strong>tu boda</strong>, <strong>evento corporativo</strong>, o <strong>celebración privada</strong> en un solo lugar. 
+        Con tecnología de vanguardia y un enfoque personalizado, cumple todo lo que imaginaste.
+      </p>
+      <a href="#formulario" class="cta-button">Reserva tu Evento</a>
     </header>
-    <section>
-        <h2>Eventos exclusivos con planificación de alto nivel</h2>
-        <p>Facilitamos la organización de <span class="highlight">matrimonios</span>, <span class="highlight">eventos corporativos</span> y <span class="highlight">celebraciones especiales</span> con tecnología avanzada.</p>
-        <p>Centraliza proveedores, gestiona pagos y automatiza tareas con IA.</p>
-        <a href="#contacto" class="cta-button">Solicita Información</a>
+
+    <!-- Sección de Beneficios -->
+    <section class="features">
+      <div class="feature">
+        <h3>Eventos Corporativos</h3>
+        <p>Impresiona a tus clientes y socios con eventos diseñados para el éxito.</p>
+      </div>
+      <div class="feature">
+        <h3>Bodas Únicas</h3>
+        <p>Creamos bodas personalizadas que reflejan tu estilo y personalidad.</p>
+      </div>
+      <div class="feature">
+        <h3>Celebraciones Privadas</h3>
+        <p>Tu fiesta privada con cada detalle cuidado al máximo.</p>
+      </div>
     </section>
-    <section id="contacto">
-        <h2>Déjanos tu contacto</h2>
-        <form>
-            <input type="text" placeholder="Tu Nombre" required><br><br>
-            <input type="email" placeholder="Tu Correo" required><br><br>
-            <button type="submit" class="cta-button">Enviar</button>
-        </form>
+
+    <!-- Formulario de Captación -->
+    <section id="formulario">
+      <h2>¿Listo para tu próximo evento?</h2>
+      <p>Déjanos tu correo y nos pondremos en contacto contigo.</p>
+      <form action="https://formsubmit.co/tucorreo@example.com" method="POST">
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="cta-button">Enviar</button>
+      </form>
     </section>
+
+    <!-- Pie de Página -->
     <footer>
-        &copy; 2025 - FIESTIA - Todos los derechos reservados
+      <p>© 2025 FiestIA. Todos los derechos reservados.</p>
+      <p><a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a></p>
     </footer>
+  </div>
 </body>
 </html>
